@@ -44,6 +44,15 @@ btn.addEventListener('click',(e)=>{
     }else {
         displayMenuItems(categoryMenu)
     }
+    removeActiveClasses()
+    btn.classList.add('active')
+    
     
 })
 });
+
+const removeActiveClasses = ()=> {
+  filterBtns.forEach(btn => {
+      btn.classList.remove('active')
+  })
+}
